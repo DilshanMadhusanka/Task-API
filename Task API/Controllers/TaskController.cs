@@ -29,6 +29,25 @@ namespace Task_API.Controllers
             return Ok(tasks);
         }
 
+        [HttpPost]
+        public IActionResult NewTasks()
+        {
+            return Ok();
+        }
+
+
+        [HttpPut]
+        public IActionResult UpdateTask()
+        {
+            return Ok();
+        }
+
+
+        [HttpDelete]
+        public IActionResult DeleteTask()
+        {
+            return Ok();
+        }
 
 
     }
