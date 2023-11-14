@@ -14,9 +14,22 @@ namespace Task_API.Controllers
 
 
         [HttpGet] // get type eke method ekak 
+
+        /* API waladi retrun kranne "IActionResult " ekak. wena ewa return kran na */
+        /*
         public String[] Task()
         {
             return new String[] { "task1", "task2", "task3" };
         }
+        */
+
+        public IActionResult Task()
+        {
+            var tasks = new String[] { "task1", "task2", "task3" };
+            return Ok(tasks);
+        }
+
+
+
     }
 }
