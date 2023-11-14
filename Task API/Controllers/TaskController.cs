@@ -25,7 +25,7 @@ namespace Task_API.Controllers
 
         public IActionResult Task()
         {
-            var tasks = new String[] { "task1", "task2", "task3" };
+            var tasks = new String[] { "task1", "task2", "task3","task4" };
             return Ok(tasks);
         }
 
