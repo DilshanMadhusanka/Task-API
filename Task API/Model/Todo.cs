@@ -8,7 +8,7 @@
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime Due { get; set;}
-        public TodoStatus Status { get; set; } // New , Inprogress , Completed
+        public TodoStatus Status { get; set; } // New , Inprogress , Completed ( me tika dala class ekak hadala thiyenne , typing krankot erros enn puluwan nisa)
     }
     
 }
