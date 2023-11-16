@@ -119,7 +119,7 @@ namespace Task_API.Controllers
                 {
                     Id =2,
                     Title = "Get vegitables",
-                    Description = " Get vegitables for the school library",
+                    Description = " Get vegitables ",
                     CreatedDate = DateTime.Now,
                     Due = DateTime.Now.AddDays(2),
                     Status = TodoStatus.Completed
