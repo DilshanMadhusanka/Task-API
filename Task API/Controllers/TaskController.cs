@@ -19,7 +19,7 @@ namespace Task_API.Controllers
         /*
         public String[] Task()
         {
-            return new String[] { "task1", "task2", "task3" };
+            return new String[] { "task1", "task2", "task3" } ;
         }
         */
 
@@ -46,6 +46,11 @@ namespace Task_API.Controllers
         [HttpDelete]
         public IActionResult DeleteTask()
         {
+            var somethingWentWrong = true;
+            if (somethingWentWrong)
+            {
+                return BadRequest();
+            }
             return Ok();
         }
 
