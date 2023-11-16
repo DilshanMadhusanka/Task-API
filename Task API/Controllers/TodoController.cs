@@ -9,9 +9,13 @@ namespace Task_API.Controllers
     [ApiController]
     public class TodoController : ControllerBase // API walata oni wena request, responce okkom commiunicate kranne base class eken.( ControllerBase)
     {
+
+        /* mehema hadn na noraml. methana hadapu okkoma tika comment karmu */
+
+
         // API class walata method noramaly action method kiyanwa.
 
-
+        /*
 
         [HttpGet] // get type eke method ekak 
 
@@ -23,6 +27,9 @@ namespace Task_API.Controllers
         }
         */
 
+
+        /*
+      
         public IActionResult Task()
         {
             var tasks = new String[] { "task1", "task2", "task3","task4" };
@@ -53,7 +60,10 @@ namespace Task_API.Controllers
             }
             return Ok();
         }
-
+  */
 
     }
+
+
+
 }
