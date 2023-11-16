@@ -7,7 +7,7 @@ namespace Task_API.Controllers
 {
     [Route("api/[controller]")]    // me deka class atributes. palweni eka route attribute eka api control attribute eka 
     [ApiController]
-    public class TaskController : ControllerBase // API walata oni wena request, responce okkom commiunicate kranne base class eken.( ControllerBase)
+    public class TodoController : ControllerBase // API walata oni wena request, responce okkom commiunicate kranne base class eken.( ControllerBase)
     {
         // API class walata method noramaly action method kiyanwa.
 
