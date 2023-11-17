@@ -90,9 +90,9 @@ namespace Task_API.Controllers
         {
             var myTodos = AllTodos();
 
-            if (id is null) return Ok(myTodos);
+            if (id is null) return Ok(myTodos); // nul value ekak awoth return wenna
            
-            myTodos = myTodos.Where(t =>t.Id ==id).ToList();   // get the end point values in AllTodos list
+            myTodos = myTodos.Where(t =>t.Id ==id).ToList();   // get the end point values in AllTodos list ( id ekat galapen value tika wiharak return kranna )
             return Ok(myTodos);      // return the element
         }
 
