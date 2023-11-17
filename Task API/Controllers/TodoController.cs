@@ -86,7 +86,7 @@ namespace Task_API.Controllers
     {
 
         [HttpGet("{id?}")]
-        public IActionResult GetTodos(int? id)
+        public IActionResult GetTodos(int? id)  // id eka nathwa unath data ganna puluwan
         {
             var myTodos = AllTodos();
 
