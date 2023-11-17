@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc; // me class eke wada krann oni dependances tika.
 using Task_API.Model;
+using Task_API.Services;
 
 // dark wela thiyenne thama use krala nathi dependancy tika 
 
@@ -85,10 +86,21 @@ namespace Task_API.Controllers
     public class TodoController : ControllerBase  // API eke request response okkoma wenne base class eka haraha
     {
 
+        private TodoServices _todoServices;
+
+        public TodoController()
+        {
+            _todoServices = new TodoServices();
+        }
+
+
+
         [HttpGet("{id?}")]
         public IActionResult GetTodos(int? id)  // id eka nathwa unath data ganna puluwan
         {
-            var myTodos = AllTodos();
+       
+
+        var myTodos = _todoServices.AllTodos();
 
             if (id is null) return Ok(myTodos); // nul value ekak awoth return wenna
            
@@ -99,58 +111,9 @@ namespace Task_API.Controllers
 
         // GetTodos
 
-        private List<Todo> AllTodos()  // create a list to store Todo items. list name is AllTodos
-        {
-            var todos = new List<Todo>();  // create an object 
-            {
-               
-               
-                var todo1 = new Todo   // create an item 
-                {
-                    Id = 1,
-                    Title = "Get books for the school",
-                    Description = " Get some books for the school library",
-                    CreatedDate = DateTime.Now,
-                    Due = DateTime.Now.AddDays(5),
-                   Status = TodoStatus.New
+        // methana thibuna set eka TodoServices class file ekat damma
 
-                };
-
-                todos.Add(todo1);  // add item to todos list
-
-
-                var todo2 = new Todo
-                {
-                    Id =2,
-                    Title = "Get vegitables",
-                    Description = " Get vegitables ",
-                    CreatedDate = DateTime.Now,
-                    Due = DateTime.Now.AddDays(2),
-                    Status = TodoStatus.Completed
-
-                };
-
-                todos.Add(todo2);  
-
-
-
-
-                var todo3 = new Todo
-                {
-                    Id = 3,
-                    Title = "Get water",
-                    Description = " Get water for the school library",
-                    CreatedDate = DateTime.Now,
-                    Due = DateTime.Now.AddDays(4),
-                    Status = TodoStatus.New
-
-                };
-
-                todos.Add(todo3);
-            }
-
-            return todos;  // return the list 
-        }
+       
     }
 
 
