@@ -85,23 +85,27 @@ namespace Task_API.Controllers
     public class TodoController : ControllerBase
     {
 
-        [HttpGet]
-        public IActionResult GetTodos()
+        [HttpGet("{id?}")]
+        public IActionResult GetTodos(int? id)
         {
-            var myTodo = AllTodos();
-            return Ok(myTodo);
+            var myTodos = AllTodos();
+
+            if (id is null) return Ok(myTodos);
+           
+            myTodos = myTodos.Where(t =>t.Id ==id).ToList();   // get the end point values in AllTodos list
+            return Ok(myTodos);      // return the element
         }
 
 
         // GetTodos
 
-        private List<Todo> AllTodos()
+        private List<Todo> AllTodos()  // create a list to store Todo items. list name is AllTodos
         {
-            var todos = new List<Todo>();
+            var todos = new List<Todo>();  // create an object 
             {
                
-
-                var todo1 = new Todo
+               
+                var todo1 = new Todo   // create an item 
                 {
                     Id = 1,
                     Title = "Get books for the school",
@@ -112,7 +116,7 @@ namespace Task_API.Controllers
 
                 };
 
-                todos.Add(todo1);
+                todos.Add(todo1);  // add item to todos list
 
 
                 var todo2 = new Todo
@@ -126,7 +130,7 @@ namespace Task_API.Controllers
 
                 };
 
-                todos.Add(todo2);
+                todos.Add(todo2);  
 
 
 
@@ -145,7 +149,7 @@ namespace Task_API.Controllers
                 todos.Add(todo3);
             }
 
-            return todos;
+            return todos;  // return the list 
         }
     }
 
