@@ -35,7 +35,7 @@ namespace Task_API.Services
 
                 };
 
-                todos.Add(todo2);
+                todos.Add(todo2);  // add the elemnt to the todos list
 
 
 
