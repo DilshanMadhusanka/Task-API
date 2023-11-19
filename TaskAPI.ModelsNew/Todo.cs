@@ -1,6 +1,6 @@
 ﻿namespace Task_API.Model
 {
-    public class Todo
+    public class Todo  // create a todo class
     {
 
         public int Id { get; set; }
