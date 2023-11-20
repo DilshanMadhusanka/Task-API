@@ -14,7 +14,7 @@ namespace Task_API.Services
                 {
                     Id = 1,
                     Title = "Get books for the school",
-                    Description = " Get some books for the school library",
+                    Description = " get some equipment for the school library",
                     CreatedDate = DateTime.Now,
                     Due = DateTime.Now.AddDays(5),
                     Status = TodoStatus.New
