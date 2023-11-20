@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();    // midlwears
+app.UseHttpsRedirection();    
 
 app.UseAuthorization();
 
